@@ -25,5 +25,5 @@ switch (true) {
             break;
 }
 }
-quadratic(1,6,2);
+quadratic(54,67,20);
 

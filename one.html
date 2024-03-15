@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>ToDo App</h2>
+   Task: <input type="text" id="task">
+   <button onclick="addTodo()">Submit</button><br><br>
+   <ul id="tasks"></ul>
+
+
+    <script>
+        function addTodo(){
+            const k=document.getElementById('task')
+            const taskinput=k.value
+            console.log(taskinput)
+            let newelement=document.createElement('li')
+            newelement.innerHTML=taskinput
+            console.log(newelement)
+            let a=document.getElementById("tasks")
+            a.appendChild(newelement)
+            k.value=null
+            newelement.addEventListener("click",function(){
+                newelement.remove()
+            })
+            
+        }
+
+
+    </script>
+</body>
+</html>
